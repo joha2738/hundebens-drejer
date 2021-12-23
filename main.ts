@@ -16,13 +16,7 @@ led.setBrightness(50)
 basic.forever(function () {
     pins.digitalWritePin(DigitalPin.P1, 0)
     if (speed == 0) {
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
+        led.unplot(0, 2)
     } else if (speed == 10) {
         led.toggle(0, 2)
     } else if (speed == 100) {
